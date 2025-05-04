@@ -1,20 +1,10 @@
 
-import { useEffect, useRef } from 'react';
+import { useRef } from 'react';
 
 const Hero = () => {
   const heroRef = useRef<HTMLDivElement>(null);
   
-  useEffect(() => {
-    const handleScroll = () => {
-      if (!heroRef.current) return;
-      const scrollPos = window.scrollY;
-      // Create parallax effect for hero section
-      heroRef.current.style.backgroundPositionY = `${scrollPos * 0.4}px`;
-    };
-    
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  // Removemos o useEffect com o efeito parallax que fazia a imagem se mover
 
   return (
     <div 
@@ -25,7 +15,7 @@ const Hero = () => {
         backgroundImage: 'linear-gradient(rgba(0, 63, 45, 0.85), rgba(0, 63, 45, 0.85)), url("/lovable-uploads/602b4879-226a-4790-872e-c406e597abc4.png")',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
-        backgroundAttachment: 'fixed'
+        backgroundAttachment: 'fixed' // Mantemos isso para garantir que a imagem fique fixa
       }}
     >
       <div className="container mx-auto py-36 md:py-52">

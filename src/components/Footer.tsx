@@ -3,18 +3,8 @@ import { Instagram, Mail, MapPin, Phone } from 'lucide-react';
 
 const Footer = () => {
   return (
-    <footer className="bg-fitness-primary text-white py-12 relative">
-      <div 
-        className="absolute inset-0 opacity-15" 
-        style={{
-          backgroundImage: 'url("/lovable-uploads/d9360aab-868b-4693-ab95-1c07da559291.png")',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          zIndex: 0
-        }}
-      ></div>
-      
-      <div className="container mx-auto px-4 relative z-10">
+    <footer className="bg-fitness-primary text-white py-12">
+      <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <h3 className="text-xl font-bold mb-4">Espaço Harmonia</h3>
@@ -52,6 +42,11 @@ const Footer = () => {
           
           <div>
             <h3 className="text-xl font-bold mb-4">Horário</h3>
+            <img 
+              src="/lovable-uploads/d9360aab-868b-4693-ab95-1c07da559291.png"
+              alt="Horário de funcionamento" 
+              className="rounded-lg w-full h-auto mb-4 shadow-md"
+            />
             <ul className="space-y-2 list-none">
               <li>Segunda - Sexta: 07:00 - 21:00</li>
               <li>Sábados: 08:00 - 15:00</li>

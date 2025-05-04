@@ -44,7 +44,7 @@ const Appointment = () => {
       <div className="container mx-auto">
         <div className={`text-center mb-12 fade-in-element ${isVisible ? 'appear' : ''}`}>
           <img 
-            src="/lovable-uploads/0bfd4478-30da-45f4-a03c-701406e5924e.png"
+            src="/lovable-uploads/e4ebd22e-1bed-4997-805d-4f07a0f2fed7.png"
             alt="Espaço Harmonia Logo" 
             className="h-16 mx-auto mb-6"
           />

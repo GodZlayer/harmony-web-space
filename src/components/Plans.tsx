@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { Check, ChevronRight } from 'lucide-react';
 
@@ -41,8 +42,8 @@ const PlanCard = ({ title, price, period, features, cta, highlighted = false }: 
   return (
     <div 
       ref={cardRef}
-      className={`fade-in-element ${isVisible ? 'appear' : ''} rounded-lg overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl ${
-        highlighted ? 'transform hover:-translate-y-2 border-4 border-fitness-secondary' : 'transform hover:-translate-y-1 border border-gray-200'
+      className={`fade-in-element ${isVisible ? 'appear' : ''} rounded-lg overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl flex flex-col h-full ${
+        highlighted ? 'border-4 border-fitness-secondary' : 'border border-gray-200'
       }`}
     >
       <div className={`p-6 ${highlighted ? 'bg-fitness-primary text-white' : 'bg-white'}`}>
@@ -52,8 +53,8 @@ const PlanCard = ({ title, price, period, features, cta, highlighted = false }: 
           <span className="ml-2 text-sm text-gray-400">{period}</span>
         </div>
       </div>
-      <div className="bg-white p-6">
-        <ul className="mb-8 space-y-3">
+      <div className="bg-white p-6 flex flex-col flex-grow">
+        <ul className="mb-8 space-y-3 flex-grow">
           {features.map((feature, index) => (
             <li key={index} className="flex items-start space-x-3">
               <Check className="h-5 w-5 text-fitness-secondary flex-shrink-0" />
@@ -65,7 +66,7 @@ const PlanCard = ({ title, price, period, features, cta, highlighted = false }: 
           href="https://wa.me/553197666203"
           target="_blank"
           rel="noopener noreferrer"
-          className={`block w-full py-3 px-4 text-center rounded-md ${
+          className={`block w-full py-3 px-4 text-center rounded-md mt-auto ${
             highlighted 
               ? 'bg-fitness-secondary hover:bg-fitness-accent text-white' 
               : 'bg-white border-2 border-fitness-primary text-fitness-primary hover:bg-fitness-primary hover:text-white'
@@ -123,6 +124,15 @@ const Plans = () => {
     '3 reavaliações durante os 90 dias'
   ];
 
+  const avulsosFeatures = [
+    'Planejamento Alimentar - R$ 180',
+    'Ficha de Treino - R$ 120',
+    'Protocolo Completo - R$ 220',
+    'Montagem de Ciclos - R$ 60',
+    'TPC - R$ 150',
+    'Entrega em até 3 dias úteis'
+  ];
+
   return (
     <section id="planos" ref={sectionRef} className="py-24 px-4 bg-gray-50">
       <div className="container mx-auto">
@@ -152,14 +162,7 @@ const Plans = () => {
             title="Planos Avulsos"
             price={120}
             period="a partir de"
-            features={[
-              'Planejamento Alimentar - R$ 180',
-              'Ficha de Treino - R$ 120',
-              'Protocolo Completo - R$ 220',
-              'Montagem de Ciclos - R$ 60',
-              'TPC - R$ 150',
-              'Entrega em até 3 dias úteis'
-            ]}
+            features={avulsosFeatures}
             cta="Saiba mais"
           />
         </div>
