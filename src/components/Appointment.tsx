@@ -43,6 +43,11 @@ const Appointment = () => {
     <section id="contato" ref={sectionRef} className="py-24 px-4 bg-white">
       <div className="container mx-auto">
         <div className={`text-center mb-12 fade-in-element ${isVisible ? 'appear' : ''}`}>
+          <img 
+            src="/lovable-uploads/0bfd4478-30da-45f4-a03c-701406e5924e.png"
+            alt="Espaço Harmonia Logo" 
+            className="h-16 mx-auto mb-6"
+          />
           <h2 className="section-heading">Agende sua Consulta</h2>
           <p className="text-gray-700 max-w-2xl mx-auto text-lg">
             Marque uma avaliação personalizada com nosso especialista Thiago e descubra o tratamento ideal para suas necessidades físicas e de saúde.

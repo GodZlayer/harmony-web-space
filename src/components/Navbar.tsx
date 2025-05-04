@@ -24,7 +24,14 @@ const Navbar = () => {
       isScrolled ? 'bg-fitness-primary shadow-md py-2' : 'bg-transparent py-4'
     }`}>
       <div className="container mx-auto px-4 flex justify-between items-center">
-        <h1 className="text-2xl font-bold text-white">Espaço Harmonia</h1>
+        <div className="flex items-center">
+          <img 
+            src="/lovable-uploads/0bfd4478-30da-45f4-a03c-701406e5924e.png" 
+            alt="Espaço Harmonia Logo" 
+            className="h-10 md:h-12 mr-3"
+          />
+          <h1 className="text-2xl font-bold text-white">Espaço Harmonia</h1>
+        </div>
         
         {/* Mobile menu button */}
         <button 

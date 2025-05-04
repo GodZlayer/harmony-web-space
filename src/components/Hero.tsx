@@ -22,7 +22,7 @@ const Hero = () => {
       ref={heroRef}
       className="relative min-h-screen flex items-center justify-center text-center px-4 pt-16"
       style={{
-        backgroundImage: 'linear-gradient(rgba(0, 63, 45, 0.85), rgba(0, 63, 45, 0.85)), url("/hero-background.jpg")',
+        backgroundImage: 'linear-gradient(rgba(0, 63, 45, 0.85), rgba(0, 63, 45, 0.85)), url("/lovable-uploads/602b4879-226a-4790-872e-c406e597abc4.png")',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundAttachment: 'fixed'

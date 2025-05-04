@@ -3,8 +3,18 @@ import { Instagram, Mail, MapPin, Phone } from 'lucide-react';
 
 const Footer = () => {
   return (
-    <footer className="bg-fitness-primary text-white py-12">
-      <div className="container mx-auto px-4">
+    <footer className="bg-fitness-primary text-white py-12 relative">
+      <div 
+        className="absolute inset-0 opacity-15" 
+        style={{
+          backgroundImage: 'url("/lovable-uploads/d9360aab-868b-4693-ab95-1c07da559291.png")',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          zIndex: 0
+        }}
+      ></div>
+      
+      <div className="container mx-auto px-4 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <h3 className="text-xl font-bold mb-4">Espaço Harmonia</h3>
